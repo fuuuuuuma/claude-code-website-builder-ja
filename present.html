@@ -56,7 +56,7 @@ a.kitlink{color:var(--brand-deep);font-weight:700}
 まずプランモードで、一度に1問ずつ・各問に推奨案をつけて、私に壁打ちして。
 最低でも「目的（1つ）／見せる相手（1人）／ゴール(CTA1つ)／必要なページ・セクション／
 各ボタンの押した先／参考サイト／トンマナ／制約」を埋めて、site-spec.md にまとめてから見せて。</pre>
-    <div class="btns"><button class="btn" onclick="copyPrompt('p1', this)">📋 コピー</button><a class="btn ghost" href="kit/prompts/01-kabeuchi.md" download>⬇ ダウンロード（.md）</a></div>
+    <div class="btns"><button class="btn" onclick="copyPrompt('p1', this)">📋 コピー</button><button class="btn ghost" onclick="downloadText('p1','01-kabeuchi.md', this)">⬇ ダウンロード（.md）</button></div>
     <p class="point">💡 ここで目的とゴールを1つに絞れるほど、後のループが速く収束する。</p>
   </section>
   <section id="kit2">
@@ -69,7 +69,7 @@ a.kitlink{color:var(--brand-deep);font-weight:700}
 デザインは1つの配色トークン(:root)に固定し、参考サイトのトンマナに寄せる。要素は足しすぎない(Simple is the best)。
 全観点100点になるまで 実行→検証→修正 を繰り返し、なったら「GitHub Pages か Vercel か」を私に質問して公開まで。
 採点は「ウルトラコード」（マルチエージェント並列）で回してよい。</pre>
-    <div class="btns"><button class="btn" onclick="copyPrompt('p2', this)">📋 コピー</button><a class="btn ghost" href="kit/prompts/02-loop-100.md" download>⬇ ダウンロード（.md）</a></div>
+    <div class="btns"><button class="btn" onclick="copyPrompt('p2', this)">📋 コピー</button><button class="btn ghost" onclick="downloadText('p2','02-loop-100.md', this)">⬇ ダウンロード（.md）</button></div>
     <p class="point">💡 採点は必ずサブエージェント（maker≠checker）。自分で「100点」と言わせない。</p>
   </section>
   <section id="kit3">
@@ -79,7 +79,7 @@ a.kitlink{color:var(--brand-deep);font-weight:700}
     <pre class="prompt" id="p3">今のサイトの全リンク・全ボタン・全フォームを実機で1つずつ押して、
 「押した先が存在するか・送信が成立するか・戻れるか」を確認して、
 動かない導線とリンク切れを一覧で出して。href="#" が残っていたら全部指摘して直して。</pre>
-    <div class="btns"><button class="btn" onclick="copyPrompt('p3', this)">📋 コピー</button><a class="btn ghost" href="kit/prompts/03-gawa-check.md" download>⬇ ダウンロード（.md）</a></div>
+    <div class="btns"><button class="btn" onclick="copyPrompt('p3', this)">📋 コピー</button><button class="btn ghost" onclick="downloadText('p3','03-gawa-check.md', this)">⬇ ダウンロード（.md）</button></div>
     <p class="point">💡 href="#" やダミーが残っていないかが最重要。</p>
   </section>
   <section id="kit4">
@@ -88,7 +88,7 @@ a.kitlink{color:var(--brand-deep);font-weight:700}
     <ul class="chk"><li>ビルド開始時、または見た目がバラつくときに送る。</li></ul>
     <pre class="prompt" id="p4">配色は design-systems の DESIGN.md を1枚選んで :root を固定して。途中で色を足さないで。
 見出しフォントも DESIGN.md のものに。参考サイト（URL）のトンマナに寄せて、レイアウトはコピーしないで。</pre>
-    <div class="btns"><button class="btn" onclick="copyPrompt('p4', this)">📋 コピー</button><a class="btn ghost" href="kit/prompts/04-design-fix.md" download>⬇ ダウンロード（.md）</a></div>
+    <div class="btns"><button class="btn" onclick="copyPrompt('p4', this)">📋 コピー</button><button class="btn ghost" onclick="downloadText('p4','04-design-fix.md', this)">⬇ ダウンロード（.md）</button></div>
     <p class="point">💡 参考サイトはトンマナの当て先。レイアウトはコピーしない。</p>
   </section>
   <section id="kit5">
@@ -97,7 +97,7 @@ a.kitlink{color:var(--brand-deep);font-weight:700}
     <ul class="chk"><li>ヒーローや装飾に画像が要るときに送る。</li></ul>
     <pre class="prompt" id="p5">OPENAI_API_KEY を設定して、scripts/gen_image.py（gpt-image-2）でヒーロー背景を1枚作って（横長・◯◯な雰囲気・文字は入れない）。
 重要な見出し・価格・CTAは画像に焼き込まず、HTMLテキストで置いて。生成後に崩れを目視して。</pre>
-    <div class="btns"><button class="btn" onclick="copyPrompt('p5', this)">📋 コピー</button><a class="btn ghost" href="kit/prompts/05-image.md" download>⬇ ダウンロード（.md）</a></div>
+    <div class="btns"><button class="btn" onclick="copyPrompt('p5', this)">📋 コピー</button><button class="btn ghost" onclick="downloadText('p5','05-image.md', this)">⬇ ダウンロード（.md）</button></div>
     <p class="point">💡 OpenAI APIのgpt-image-2を使う（OPENAI_API_KEYが必要）。重要テキストは必ずHTMLに。</p>
   </section>
   <section id="kit6">
@@ -107,7 +107,7 @@ a.kitlink{color:var(--brand-deep);font-weight:700}
     <pre class="prompt" id="p6">全観点100点になったら、GitHub Pages と Vercel のどちらで公開するか私に聞いて。
 選んだ先に公開したら、本番URLが200を返すか・本番でも全導線が動くかを確認して報告して。
 （独自ドメイン・決済・フォーム実連携は、実行前に必ず私に確認して）</pre>
-    <div class="btns"><button class="btn" onclick="copyPrompt('p6', this)">📋 コピー</button><a class="btn ghost" href="kit/prompts/06-publish.md" download>⬇ ダウンロード（.md）</a></div>
+    <div class="btns"><button class="btn" onclick="copyPrompt('p6', this)">📋 コピー</button><button class="btn ghost" onclick="downloadText('p6','06-publish.md', this)">⬇ ダウンロード（.md）</button></div>
     <p class="point">💡 デプロイ・決済・外部連携は取り消せない操作。実行前に必ず人間が確認。</p>
   </section>
   <section id="kit7">
@@ -117,7 +117,7 @@ a.kitlink{color:var(--brand-deep);font-weight:700}
     <pre class="prompt" id="p7">採点を「ウルトラコード」（マルチエージェントのWorkflow）で並列に回して。
 機能・デザイン・モバイル・コピーを同時に、各観点をさらに細かく分けて0-100で採点し、100点まで直して。
 公開前に /code-review でも最終レビューして。使うのは山場だけ（トークンは多めなので）。</pre>
-    <div class="btns"><button class="btn" onclick="copyPrompt('p7', this)">📋 コピー</button><a class="btn ghost" href="kit/prompts/07-ultracode.md" download>⬇ ダウンロード（.md）</a></div>
+    <div class="btns"><button class="btn" onclick="copyPrompt('p7', this)">📋 コピー</button><button class="btn ghost" onclick="downloadText('p7','07-ultracode.md', this)">⬇ ダウンロード（.md）</button></div>
     <p class="point">💡 トークンは多め＝山場だけで使う。公開前は /code-review も併用。</p>
   </section>
   <section id="fullkit">
@@ -139,9 +139,19 @@ a.kitlink{color:var(--brand-deep);font-weight:700}
 </div>
 <script>
 function copyTextWithFallback(text){
-  return navigator.clipboard.writeText(text).then(()=>true).catch(()=>{
-    const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();
-    const ok=document.execCommand('copy');ta.remove();return ok;});
+  function fallback(){
+    try {
+      const ta = document.createElement('textarea');
+      ta.value = text; document.body.appendChild(ta); ta.select();
+      const ok = document.execCommand('copy');
+      ta.remove();
+      return ok;
+    } catch(e){ return false; }
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    return navigator.clipboard.writeText(text).then(() => true).catch(fallback);
+  }
+  return Promise.resolve(fallback());
 }
 function showCopyResult(btn,ok){
   const o=btn.textContent;
@@ -151,6 +161,19 @@ function showCopyResult(btn,ok){
 async function copyPrompt(id,btn){
   const ok=await copyTextWithFallback(document.getElementById(id).textContent);
   showCopyResult(btn,ok);
+}
+function downloadText(id, filename, btn){
+  try {
+    const text = document.getElementById(id).textContent;
+    const blob = new Blob([text], {type:'text/plain;charset=utf-8'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = filename;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 2000);
+  } catch(e){
+    if(btn){ const orig = btn.textContent; btn.textContent = '✖ 保存できません。上のコピーをご利用ください'; setTimeout(() => { btn.textContent = orig; }, 3500); }
+  }
 }
 </script>
 </body>
